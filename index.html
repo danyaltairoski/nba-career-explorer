@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NBA Career Explorer</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <header class="container">
+      <h1>NBA Career Explorer</h1>
+      <p class="subtitle">
+        How do top players stats evolve throughout their careers?
+      </p>
+    </header>
+
+    <section id="controls" class="container">
+      <div class="control">
+        <label for="statSelect">Stat</label>
+        <select id="statSelect" aria-label="Select statistic">
+          <option value="pts" selected>Points</option>
+          <option value="ast">Assists</option>
+          <option value="reb">Rebounds</option>
+        </select>
+      </div>
+
+      <div class="control" id="playerControls" aria-label="Player filters">
+        <!-- checkboxes injected by JS based on data -->
+      </div>
+
+      <div class="control">
+        <button id="resetBtn" type="button" title="Reset view">Reset</button>
+      </div>
+    </section>
+
+    <main class="container">
+      <figure class="chart-wrap">
+        <svg id="chart" role="img" aria-labelledby="title desc"></svg>
+      </figure>
+    </main>
+
+    <footer class="container small">
+      <p>Data source: Compiled CSV from Basketball-Reference</p>
+    </footer>
+
+    <div id="tooltip" class="tooltip" role="tooltip" aria-hidden="true"></div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
