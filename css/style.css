@@ -1,146 +1,113 @@
-:root {
-  --bg: #0f1115;
-  --panel: #161a22;
-  --ink: #e7e9ee;
-  --muted: #aab1c3;
-  --accent: #4f8cff;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
-  font-family:
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    Segoe UI,
-    Roboto,
-    "Helvetica Neue",
-    Arial,
-    "Noto Sans",
-    "Apple Color Emoji",
-    "Segoe UI Emoji";
-  background: var(--bg);
-  color: var(--ink);
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: #0f0f17;
+  color: #f8f8ff;
+  min-height: 100vh;
 }
 
-.container {
-  width: min(1100px, 92vw);
-  margin: 0 auto;
-}
-
-header {
-  padding: 2rem 0 1rem;
-}
-
-h1 {
-  margin: 0;
-  font-size: 1.9rem;
-}
-.subtitle {
-  margin: 0.25rem 0 0;
-  color: var(--muted);
-}
-.small {
-  color: var(--muted);
-}
-
-#controls {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  flex-wrap: wrap;
-  background: var(--panel);
-  padding: 0.75rem 1rem;
-  border-radius: 14px;
-}
-
-.control {
+.header {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 20px;
+  padding: 16px 24px;
+  background: #1b1b2b;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-label {
-  color: var(--muted);
+
+.header select,
+.header button {
+  background: #2a2a40;
+  color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 1rem;
 }
-select,
-button {
-  background: #0d1117;
-  color: var(--ink);
-  border: 1px solid #2a3342;
-  border-radius: 10px;
-  padding: 0.45rem 0.6rem;
-}
-button {
+
+.header button {
   cursor: pointer;
-}
-button:hover {
-  border-color: var(--accent);
+  transition: background 0.2s ease;
 }
 
-.chart-wrap {
-  position: relative;
-  margin: 1rem 0 2rem;
+.header button:hover {
+  background: #35355a;
 }
-svg#chart {
+
+#playerImage {
+  width: 80px;
+  border-radius: 8px;
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 24px;
+}
+
+.vis-panel {
+  flex: 2;
+  min-width: 620px;
+}
+
+.timeline-panel {
+  flex: 1;
+  min-width: 280px;
+  background: #161625;
+  padding: 16px;
+  border-radius: 12px;
+  max-height: calc(550px + 32px);
+  overflow-y: auto;
+}
+
+.timeline-panel h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  color: #ffdd63;
+}
+
+#court {
   width: 100%;
-  height: 520px;
-  display: block;
-  background: var(--panel);
-  border-radius: 14px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
 }
 
-.axis path,
-.axis line {
-  stroke: #465069;
-}
-.axis text {
-  fill: #cfd5e7;
-  font-size: 12px;
+.seasonCard {
+  margin-bottom: 16px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.line {
-  fill: none;
-  stroke-width: 2.5px;
-  filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
-}
-.line.dimmed {
-  opacity: 0.25;
+.seasonHint {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 12px;
 }
 
-.legend {
-  font-size: 12px;
-  fill: #e7e9ee;
-}
-.legend .swatch {
-  stroke: #0008;
-  stroke-width: 0.5;
+.seasonTitle {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-bottom: 6px;
 }
 
-.tooltip {
-  position: absolute;
-  pointer-events: none;
-  background: #0d1117;
-  color: var(--ink);
-  border: 1px solid #2a3342;
+.bar {
+  height: 18px;
+  display: flex;
   border-radius: 10px;
-  padding: 8px 10px;
-  font-size: 12px;
-  line-height: 1.3;
-  transform: translate(-50%, -120%);
-  opacity: 0;
-  transition: opacity 120ms ease;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
 }
 
-.checkbox {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  margin-right: 0.75rem;
+.seasonMeta {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.75);
 }
-.checkbox input {
-  accent-color: var(--accent);
-}
+
+.made { background: #ffd700; }
+.missed { background: #8c52ff; }

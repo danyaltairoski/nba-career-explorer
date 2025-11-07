@@ -1,51 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>NBA Career Explorer</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-  </head>
-  <body>
-    <header class="container">
-      <h1>NBA Career Explorer</h1>
-      <p class="subtitle">
-        How do top players stats evolve throughout their careers?
-      </p>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <title>NBA Shot Career Explorer</title>
 
-    <section id="controls" class="container">
-      <div class="control">
-        <label for="statSelect">Stat</label>
-        <select id="statSelect" aria-label="Select statistic">
-          <option value="pts" selected>Points</option>
-          <option value="ast">Assists</option>
-          <option value="reb">Rebounds</option>
-        </select>
-      </div>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
 
-      <div class="control" id="playerControls" aria-label="Player filters">
-        <!-- checkboxes injected by JS based on data -->
-      </div>
+<body>
 
-      <div class="control">
-        <button id="resetBtn" type="button" title="Reset view">Reset</button>
-      </div>
+  <header class="header">
+    <img id="playerImage" src="images/kobe.jpg" alt="Selected player portrait">
+    <select id="playerSelect">
+      <option value="kobe">Kobe Bryant</option>
+      <option value="lebron">LeBron James</option>
+      <option value="curry">Stephen Curry</option>
+      <option value="kd">Kevin Durant</option>
+    </select>
+    <button id="playBtn">▶ Play Career</button>
+  </header>
+
+  <main class="layout">
+    <section class="vis-panel">
+      <svg id="court" width="900" height="550" aria-label="Player shot chart"></svg>
     </section>
 
-    <main class="container">
-      <figure class="chart-wrap">
-        <svg id="chart" role="img" aria-labelledby="title desc"></svg>
-      </figure>
-    </main>
+    <section class="timeline-panel">
+      <h2>Season breakdown</h2>
+      <div id="seasonBars" aria-live="polite"></div>
+    </section>
+  </main>
 
-    <footer class="container small">
-      <p>Data source: Compiled CSV from Basketball-Reference</p>
-    </footer>
-
-    <div id="tooltip" class="tooltip" role="tooltip" aria-hidden="true"></div>
-
-    <script src="js/main.js"></script>
-  </body>
+  <script src="js/court.js"></script>
+  <script src="js/timeline.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>
