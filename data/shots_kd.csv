@@ -1,4 +1,4 @@
-PLAYER,SEASON,TEAM,X,Y,SHOT_MADE,PLAYOFFS,MVP,Champion
+PLAYER,SEASON,TEAM,X,Y,SHOT_MADE,PLAYOFFS,MVP,Champion, Highlight_desc, Highlight_gif
 Kevin Durant,2007-08,SEA,5.4,31.35,0,0,0,0
 Kevin Durant,2007-08,SEA,-1.3,14.65,0,0,0,0
 Kevin Durant,2007-08,SEA,14.9,10.35,0,0,0,0
@@ -215,7 +215,7 @@ Kevin Durant,2007-08,SEA,-11.0,11.65,1,0,0,0
 Kevin Durant,2007-08,SEA,-17.2,13.15,0,0,0,0
 Kevin Durant,2007-08,SEA,19.4,23.65,0,0,0,0
 Kevin Durant,2007-08,SEA,-17.2,6.95,0,0,0,0
-Kevin Durant,2007-08,SEA,-6.4,9.05,1,0,0,0
+Kevin Durant,2007-08,SEA,-6.4,9.05,1,0,0,0, First Basket, videos/kd/first_basket.gif
 Kevin Durant,2007-08,SEA,-16.3,8.35,0,0,0,0
 Kevin Durant,2007-08,SEA,24.1,8.25,0,0,0,0
 Kevin Durant,2007-08,SEA,-0.0,5.25,0,0,0,0
@@ -6035,7 +6035,7 @@ Kevin Durant,2011-12,OKC,-6.7,13.85,0,0,0,0
 Kevin Durant,2011-12,OKC,0.4,30.65,0,0,0,0
 Kevin Durant,2011-12,OKC,-1.0,21.15,1,0,0,0
 Kevin Durant,2011-12,OKC,3.8,28.25,0,0,0,0
-Kevin Durant,2011-12,OKC,-13.6,29.15,1,0,0,0
+Kevin Durant,2011-12,OKC,-13.6,29.15,1,0,0,0, Durant rises up and buries the clutch game-winner vs the Mavs, videos/kd/1112.gif
 Kevin Durant,2011-12,OKC,-15.9,10.25,1,0,0,0
 Kevin Durant,2011-12,OKC,-10.6,9.75,0,0,0,0
 Kevin Durant,2011-12,OKC,5.4,5.95,0,0,0,0
@@ -10094,7 +10094,7 @@ Kevin Durant,2013-14,OKC,13.1,27.75,1,0,1,0
 Kevin Durant,2013-14,OKC,-12.7,21.25,1,0,1,0
 Kevin Durant,2013-14,OKC,-13.3,28.75,1,0,1,0
 Kevin Durant,2013-14,OKC,-15.7,13.55,0,0,1,0
-Kevin Durant,2013-14,OKC,11.6,29.95,1,0,1,0
+Kevin Durant,2013-14,OKC,11.6,29.95,1,0,1,0, Kevin Durant silences Toronto with the game-winner, videos/kd/1314.gif
 Kevin Durant,2013-14,OKC,-0.0,10.55,0,0,1,0
 Kevin Durant,2013-14,OKC,20.1,29.15,1,0,1,0
 Kevin Durant,2013-14,OKC,-12.4,27.15,0,0,1,0
@@ -11284,7 +11284,7 @@ Kevin Durant,2015-16,OKC,-1.5,23.05,0,0,0,0
 Kevin Durant,2015-16,OKC,-1.2,5.55,0,0,0,0
 Kevin Durant,2015-16,OKC,-0.1,16.25,0,0,0,0
 Kevin Durant,2015-16,OKC,-3.7,5.45,1,0,0,0
-Kevin Durant,2015-16,OKC,-5.0,7.35,1,0,0,0
+Kevin Durant,2015-16,OKC,-5.0,7.35,1,0,0,0, KD shakes Randle with the crossover and lays it in, videos/kd/1516.gif
 Kevin Durant,2015-16,OKC,-4.2,22.65,0,0,0,0
 Kevin Durant,2015-16,OKC,-0.9,4.75,1,0,0,0
 Kevin Durant,2015-16,OKC,-7.3,28.95,0,0,0,0
@@ -12668,7 +12668,7 @@ Kevin Durant,2016-17,GSW,-13.5,8.85,0,0,0,1
 Kevin Durant,2016-17,GSW,-5.1,24.05,0,0,0,1
 Kevin Durant,2016-17,GSW,-0.2,5.25,0,0,0,1
 Kevin Durant,2016-17,GSW,-7.4,8.35,1,0,0,1
-Kevin Durant,2016-17,GSW,10.2,31.45,1,0,0,1
+Kevin Durant,2016-17,GSW,10.2,31.45,1,0,0,1, KD drills the clutch go-ahead three over LeBron in the 2017 Finals, videos/kd/1617.gif
 Kevin Durant,2016-17,GSW,-23.0,5.95,0,0,0,1
 Kevin Durant,2016-17,GSW,1.6,5.45,1,0,0,1
 Kevin Durant,2016-17,GSW,-23.2,8.05,0,0,0,1
@@ -13726,7 +13726,7 @@ Kevin Durant,2017-18,GSW,4.9,30.45,0,0,0,1
 Kevin Durant,2017-18,GSW,-13.1,27.45,1,0,0,1
 Kevin Durant,2017-18,GSW,-9.2,29.25,1,0,0,1
 Kevin Durant,2017-18,GSW,-10.5,16.25,1,0,0,1
-Kevin Durant,2017-18,GSW,5.8,26.35,1,0,0,1
+Kevin Durant,2017-18,GSW,5.8,26.35,1,0,0,1, KD drills the clutch jumper in OT to beat L.A., videos/kd/1718_2.gif
 Kevin Durant,2017-18,GSW,-23.1,11.95,0,0,0,1
 Kevin Durant,2017-18,GSW,-0.4,5.75,1,0,0,1
 Kevin Durant,2017-18,GSW,14.3,25.95,0,0,0,1
@@ -13936,7 +13936,7 @@ Kevin Durant,2017-18,GSW,5.1,12.85,1,0,0,1
 Kevin Durant,2017-18,GSW,-10.2,20.65,0,0,0,1
 Kevin Durant,2017-18,GSW,0.9,6.55,1,0,0,1
 Kevin Durant,2017-18,GSW,-8.6,29.05,0,0,0,1
-Kevin Durant,2017-18,GSW,6.6,33.55,1,0,0,1
+Kevin Durant,2017-18,GSW,6.6,33.55,1,0,0,1, Durant hits the game-sealing deep three in the 2018 NBA Finals, videos/kd/1718.gif
 Kevin Durant,2017-18,GSW,23.6,15.95,1,0,0,1
 Kevin Durant,2017-18,GSW,1.4,20.65,1,0,0,1
 Kevin Durant,2017-18,GSW,10.4,27.95,0,0,0,1
@@ -16060,7 +16060,7 @@ Kevin Durant,2020-21,BKN,-0.6,4.85,1,0,0,0
 Kevin Durant,2020-21,BKN,-12.7,26.55,0,0,0,0
 Kevin Durant,2020-21,BKN,0.9,17.05,1,0,0,0
 Kevin Durant,2020-21,BKN,0.3,31.45,1,0,0,0
-Kevin Durant,2020-21,BKN,0.7,12.65,1,0,0,0
+Kevin Durant,2020-21,BKN,0.7,12.65,1,0,0,0, KD caps off the gorgeous Nets ball movement with the jam, videos/kd/2021.gif
 Kevin Durant,2020-21,BKN,-5.9,7.95,1,0,0,0
 Kevin Durant,2020-21,BKN,-2.0,19.15,1,0,0,0
 Kevin Durant,2020-21,BKN,-8.6,13.85,0,0,0,0
@@ -17318,7 +17318,7 @@ Kevin Durant,2021-22,BKN,8.0,31.05,0,0,0,0
 Kevin Durant,2021-22,BKN,-3.8,7.55,0,0,0,0
 Kevin Durant,2021-22,BKN,-7.7,9.15,0,0,0,0
 Kevin Durant,2021-22,BKN,-14.8,17.25,0,0,0,0
-Kevin Durant,2021-22,BKN,-13.0,29.85,1,0,0,0
+Kevin Durant,2021-22,BKN,-13.0,29.85,1,0,0,0, KD drops his defender with a smooth ankle-breaker, videos/kd/2122.gif
 Kevin Durant,2021-22,BKN,2.7,12.45,0,0,0,0
 Kevin Durant,2021-22,BKN,-11.5,13.25,1,0,0,0
 Kevin Durant,2021-22,BKN,0.4,32.55,0,0,0,0
@@ -18003,7 +18003,7 @@ Kevin Durant,2022-23,BKN,10.5,10.75,1,0,0,0
 Kevin Durant,2022-23,BKN,4.8,25.75,1,0,0,0
 Kevin Durant,2022-23,BKN,-16.9,6.15,1,0,0,0
 Kevin Durant,2022-23,BKN,15.0,24.75,1,0,0,0
-Kevin Durant,2022-23,BKN,-4.8,18.85,1,0,0,0
+Kevin Durant,2022-23,BKN,-4.8,18.85,1,0,0,0, Durant breaks down Gafford for the highlight play, videos/kd/2223.gif
 Kevin Durant,2022-23,BKN,-19.5,12.45,0,0,0,0
 Kevin Durant,2022-23,BKN,-12.9,19.95,0,0,0,0
 Kevin Durant,2022-23,BKN,-17.8,6.95,1,0,0,0
@@ -19482,7 +19482,7 @@ Kevin Durant,2023-24,PHX,7.4,18.25,0,0,0,0
 Kevin Durant,2023-24,PHX,-4.3,20.65,0,0,0,0
 Kevin Durant,2023-24,PHX,10.4,29.45,1,0,0,0
 Kevin Durant,2023-24,PHX,12.6,29.65,1,0,0,0
-Kevin Durant,2023-24,PHX,6.4,24.15,1,0,0,0
+Kevin Durant,2023-24,PHX,6.4,24.15,1,0,0,0, KD sinks the clutch game-winning shot vs Chicago, videos/kd/2324.gif
 Kevin Durant,2023-24,PHX,21.9,21.45,1,0,0,0
 Kevin Durant,2023-24,PHX,-7.0,16.85,1,0,0,0
 Kevin Durant,2023-24,PHX,-1.8,8.15,1,0,0,0

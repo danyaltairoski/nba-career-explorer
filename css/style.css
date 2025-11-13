@@ -57,20 +57,27 @@ body {
 }
 
 .layout {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
+  display: grid;
+  grid-template-columns: 230px 1fr 320px;
+  gap: 24px;
   padding: 24px;
 }
 
+.shot-panel {
+  background: #161625;
+  border-radius: 12px;
+  padding: 16px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .vis-panel {
-  flex: 2;
-  min-width: 620px;
+  min-width: 540px;
 }
 
 .timeline-panel {
-  flex: 1;
-  min-width: 280px;
   background: #161625;
   padding: 16px;
   border-radius: 12px;
@@ -78,11 +85,133 @@ body {
   overflow-y: auto;
 }
 
+@media (max-width: 1200px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .shot-panel,
+  .timeline-panel {
+    max-height: none;
+  }
+}
+
+.shot-type-section {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.shot-type-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.shot-type-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #ffe07d;
+  letter-spacing: 0.02em;
+}
+
+#shotTypeSeason {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.shotTypeRow {
+  margin-bottom: 14px;
+}
+
+.shotTypeLabel {
+  font-size: 0.85rem;
+  margin-bottom: 2px;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.shotTypeValue {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 4px;
+}
+
+.shotTypeTrack {
+  position: relative;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.shotTypeFill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 999px;
+  width: 0;
+  transition: width 0.4s ease;
+}
+
+.shotTypeDot {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #161625;
+  background: #fff;
+}
+
 .timeline-panel h2 {
   margin-top: 0;
   font-size: 1.1rem;
   letter-spacing: 0.02em;
   color: #ffdd63;
+}
+
+.highlightHint {
+  margin-top: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 0.9rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.highlightHintIcon {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 45, 64, 0.95);
+  background: radial-gradient(circle, rgba(255, 45, 64, 0.95) 0%, rgba(255, 45, 64, 0.2) 70%, transparent 100%);
+  box-shadow: 0 0 12px rgba(255, 45, 64, 0.85), 0 0 20px rgba(255, 255, 255, 0.5);
+  animation: hintPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes hintPulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
 }
 
 #court {
@@ -201,4 +330,115 @@ body {
 .seasonCard.active {
   border-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+.shotTooltip {
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translate(-9999px, -9999px);
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(15, 15, 23, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 240px;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 1;
+}
+
+.shotTooltip.hidden {
+  opacity: 0;
+  transform: translate(-9999px, -9999px);
+}
+
+.tooltipText {
+  font-size: 0.85rem;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.shotTooltip .tooltipSeason {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tooltipMedia img,
+.tooltipMedia video {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tooltipMedia video {
+  background: #000;
+}
+.shot.hasHighlight circle:not(.highlightRing):not(.highlightPulse),
+.shot.hasHighlight line {
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.55));
+}
+
+.shot.hasHighlight {
+  cursor: pointer;
+}
+
+.shot .highlightHoverArea {
+  pointer-events: all;
+}
+
+.shot .highlightIndicator {
+  pointer-events: none;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.shot .highlightRing {
+  fill: rgba(255, 82, 99, 0.12);
+  stroke: rgba(255, 45, 64, 0.95);
+  stroke-width: 1.6;
+  stroke-dasharray: 6 4;
+  animation: highlightRingPulse 2.2s ease-in-out infinite;
+  mix-blend-mode: screen;
+}
+
+.shot .highlightPulse {
+  fill: rgba(255, 45, 64, 0.6);
+  stroke: none;
+  animation: highlightOrb 1.7s ease-in-out infinite;
+  mix-blend-mode: lighten;
+}
+
+@keyframes highlightRingPulse {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.2;
+  }
+  40% {
+    transform: scale(1.25);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.65);
+    opacity: 0;
+  }
+}
+
+@keyframes highlightOrb {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.55);
+    opacity: 0;
+  }
 }

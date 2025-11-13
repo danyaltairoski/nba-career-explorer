@@ -15,6 +15,12 @@ const TEAM_LOGO_FILES = {
   HOU: "rockets_logo.png"
 };
 
+const SHOT_TYPE_DEFS = [
+  { key: "rim", label: "Layup / At Rim", color: "#ffb347" },
+  { key: "mid", label: "Jumper / Midrange", color: "#7ed0ff" },
+  { key: "three", label: "3PT Attempts", color: "#60f2c3" }
+];
+
 function addSeasonBar(season, shots, palette = null) {
   const made = shots.filter(s => s.made).length;
   const total = shots.length;
@@ -79,6 +85,58 @@ function addSeasonBar(season, shots, palette = null) {
   });
 
   scrollTimelineToBottom();
+}
+
+function updateShotTypeViz(season, counts) {
+  const container = d3.select("#shotTypeBars");
+  const seasonLabel = d3.select("#shotTypeSeason");
+
+  if (!counts) {
+    seasonLabel.text("Select a season");
+    container.html(`<div class="seasonHint">Shot mix will appear here.</div>`);
+    return;
+  }
+
+  seasonLabel.text(season);
+  const total = SHOT_TYPE_DEFS.reduce((acc, def) => acc + (counts[def.key] || 0), 0) || 1;
+  const data = SHOT_TYPE_DEFS.map(def => ({
+    ...def,
+    count: counts[def.key] || 0,
+    percent: ((counts[def.key] || 0) / total) * 100
+  }));
+
+  const rows = container.selectAll(".shotTypeRow").data(data, d => d.key);
+
+  const rowEnter = rows.enter()
+    .append("div")
+    .attr("class", "shotTypeRow");
+
+  rowEnter.append("div").attr("class", "shotTypeLabel");
+  rowEnter.append("div").attr("class", "shotTypeValue");
+  const track = rowEnter.append("div").attr("class", "shotTypeTrack");
+  track.append("div").attr("class", "shotTypeFill");
+  track.append("span").attr("class", "shotTypeDot");
+
+  const merged = rowEnter.merge(rows);
+  merged.select(".shotTypeLabel").text(d => d.label);
+  merged.select(".shotTypeValue").text(d => `${d.count} shots`);
+  merged.select(".shotTypeFill")
+    .style("width", d => `${d.percent}%`)
+    .style("background", d => d.color);
+  merged.select(".shotTypeDot")
+    .style("left", d => `calc(${Math.max(d.percent, 1)}% - 6px)`)
+    .style("background", d => d.color);
+
+  rows.exit().remove();
+}
+
+function resetShotTypeViz() {
+  updateShotTypeViz(null, null);
+}
+
+if (typeof window !== "undefined") {
+  window.updateShotTypeViz = updateShotTypeViz;
+  window.resetShotTypeViz = resetShotTypeViz;
 }
 
 function scrollTimelineToBottom() {

@@ -1,4 +1,4 @@
-PLAYER,SEASON,TEAM,X,Y,SHOT_MADE,PLAYOFFS,MVP,Champion
+PLAYER,SEASON,TEAM,X,Y,SHOT_MADE,PLAYOFFS,MVP,Champion, Highlight_desc, Highlight_gif
 Kobe Bryant,1996-97,LAL,14.0,16.85,0,0,0,0
 Kobe Bryant,1996-97,LAL,13.1,14.95,0,0,0,0
 Kobe Bryant,1996-97,LAL,14.2,23.35,1,0,0,0
@@ -341,7 +341,7 @@ Kobe Bryant,1996-97,LAL,14.6,24.95,1,0,0,0
 Kobe Bryant,1996-97,LAL,-0.0,5.25,0,0,0,0
 Kobe Bryant,1996-97,LAL,-9.2,28.15,0,0,0,0
 Kobe Bryant,1996-97,LAL,15.3,22.05,0,0,0,0
-Kobe Bryant,1996-97,LAL,-0.1,21.05,1,0,0,0
+Kobe Bryant,1996-97,LAL,-0.1,21.05,1,0,0,0, First Basket, videos/kobe/first_basket.gif
 Kobe Bryant,1996-97,LAL,-0.0,5.25,0,0,0,0
 Kobe Bryant,1996-97,LAL,17.4,19.95,0,0,0,0
 Kobe Bryant,1996-97,LAL,-0.0,5.25,0,0,0,0
@@ -6551,7 +6551,7 @@ Kobe Bryant,2002-03,LAL,-12.6,9.05,0,0,0,0
 Kobe Bryant,2002-03,LAL,-1.6,5.25,1,0,0,0
 Kobe Bryant,2002-03,LAL,-15.1,18.75,0,0,0,0
 Kobe Bryant,2002-03,LAL,-20.5,1.5499999999999998,1,0,0,0
-Kobe Bryant,2002-03,LAL,0.8,4.65,1,0,0,0
+Kobe Bryant,2002-03,LAL,0.8,4.65,1,0,0,0, Kobe throws down a double-clutch dunk over Garnett, videos/kobe/0203.gif
 Kobe Bryant,2002-03,LAL,-0.6,25.35,0,0,0,0
 Kobe Bryant,2002-03,LAL,-7.5,6.45,0,0,0,0
 Kobe Bryant,2002-03,LAL,-10.2,11.65,1,0,0,0
@@ -10087,7 +10087,7 @@ Kobe Bryant,2004-05,LAL,12.2,19.85,1,0,0,0
 Kobe Bryant,2004-05,LAL,14.0,16.95,0,0,0,0
 Kobe Bryant,2004-05,LAL,-0.0,5.25,1,0,0,0
 Kobe Bryant,2004-05,LAL,-0.0,5.25,0,0,0,0
-Kobe Bryant,2004-05,LAL,1.3,8.35,1,0,0,0
+Kobe Bryant,2004-05,LAL,1.3,8.35,1,0,0,0, Bryant throws down a poster on Dwight Howard, videos/kobe/0405.gif
 Kobe Bryant,2004-05,LAL,1.0,11.85,0,0,0,0
 Kobe Bryant,2004-05,LAL,-18.2,24.15,0,0,0,0
 Kobe Bryant,2004-05,LAL,-0.0,5.25,0,0,0,0
@@ -12082,7 +12082,7 @@ Kobe Bryant,2005-06,LAL,-3.8,19.75,1,0,0,0
 Kobe Bryant,2005-06,LAL,13.3,10.85,1,0,0,0
 Kobe Bryant,2005-06,LAL,10.2,8.55,1,0,0,0
 Kobe Bryant,2005-06,LAL,10.7,19.85,1,0,0,0
-Kobe Bryant,2005-06,LAL,-6.9,22.85,1,0,0,0
+Kobe Bryant,2005-06,LAL,-6.9,22.85,1,0,0,0, Bryant hits the clutch playoff game-winner vs the Suns, videos/kobe/0506.gif
 Kobe Bryant,2005-06,LAL,-0.0,5.25,1,0,0,0
 Kobe Bryant,2005-06,LAL,7.7,20.75,0,0,0,0
 Kobe Bryant,2005-06,LAL,2.1,23.95,0,0,0,0
@@ -16764,7 +16764,7 @@ Kobe Bryant,2008-09,LAL,5.4,25.85,1,0,0,1
 Kobe Bryant,2008-09,LAL,10.9,19.85,0,0,0,1
 Kobe Bryant,2008-09,LAL,10.8,22.85,0,0,0,1
 Kobe Bryant,2008-09,LAL,-15.7,2.75,1,0,0,1
-Kobe Bryant,2008-09,LAL,2.9,8.65,1,0,0,1
+Kobe Bryant,2008-09,LAL,2.9,8.65,1,0,0,1, Bryant self-lobs off the backboard and finishes the layup, videos/kobe/0809.gif
 Kobe Bryant,2008-09,LAL,-13.6,18.15,1,0,0,1
 Kobe Bryant,2008-09,LAL,20.5,20.65,0,0,0,1
 Kobe Bryant,2008-09,LAL,-0.0,5.25,1,0,0,1
@@ -18561,7 +18561,7 @@ Kobe Bryant,2009-10,LAL,-8.9,26.15,0,0,0,1
 Kobe Bryant,2009-10,LAL,-0.0,5.25,1,0,0,1
 Kobe Bryant,2009-10,LAL,18.8,6.15,0,0,0,1
 Kobe Bryant,2009-10,LAL,-0.0,5.25,0,0,0,1
-Kobe Bryant,2009-10,LAL,-0.6,32.65,1,0,0,1
+Kobe Bryant,2009-10,LAL,-0.6,32.65,1,0,0,1, Bryant drills the game-winning bank shot vs the Heat, videos/kobe/0910.gif
 Kobe Bryant,2009-10,LAL,-0.0,25.75,1,0,0,1
 Kobe Bryant,2009-10,LAL,1.1,32.15,0,0,0,1
 Kobe Bryant,2009-10,LAL,-17.6,27.95,1,0,0,1
@@ -23003,7 +23003,7 @@ Kobe Bryant,2012-13,LAL,-1.7,9.35,1,0,0,0
 Kobe Bryant,2012-13,LAL,-6.2,15.95,1,0,0,0
 Kobe Bryant,2012-13,LAL,5.9,31.75,0,0,0,0
 Kobe Bryant,2012-13,LAL,-2.8,5.05,1,0,0,0
-Kobe Bryant,2012-13,LAL,-0.1,11.35,1,0,0,0
+Kobe Bryant,2012-13,LAL,-0.1,11.35,1,0,0,0, Kobe rises up and dunks over the Brooklyn Nets, videos/kobe/1213.gif
 Kobe Bryant,2012-13,LAL,1.1,5.55,0,0,0,0
 Kobe Bryant,2012-13,LAL,6.0,17.35,1,0,0,0
 Kobe Bryant,2012-13,LAL,-0.4,9.15,0,0,0,0
@@ -24321,7 +24321,7 @@ Kobe Bryant,2013-14,LAL,15.8,26.65,0,0,0,0
 Kobe Bryant,2013-14,LAL,-24.2,5.95,0,0,0,0
 Kobe Bryant,2013-14,LAL,-0.1,6.75,1,0,0,0
 Kobe Bryant,2013-14,LAL,-0.9,4.65,1,0,0,0
-Kobe Bryant,2013-14,LAL,1.5,5.35,1,0,0,0
+Kobe Bryant,2013-14,LAL,1.5,5.35,1,0,0,0, Kobe blows past his defender and throws down the slam, videos/kobe/1314.gif
 Kobe Bryant,2013-14,LAL,-2.1,17.35,0,0,0,0
 Kobe Bryant,2013-14,LAL,9.7,15.65,0,0,0,0
 Kobe Bryant,2013-14,LAL,-6.4,16.85,0,0,0,0
@@ -25697,7 +25697,7 @@ Kobe Bryant,2015-16,LAL,-9.7,10.85,0,0,0,0
 Kobe Bryant,2015-16,LAL,7.9,5.95,0,0,0,0
 Kobe Bryant,2015-16,LAL,-0.4,16.75,1,0,0,0
 Kobe Bryant,2015-16,LAL,7.9,28.05,0,0,0,0
-Kobe Bryant,2015-16,LAL,-5.8,28.45,1,0,0,0
+Kobe Bryant,2015-16,LAL,-5.8,28.45,1,0,0,0, Bryant sinks the go-ahead jumper during his iconic 60-point game against Utah, videos/kobe/1516.gif
 Kobe Bryant,2015-16,LAL,-21.8,17.25,0,0,0,0
 Kobe Bryant,2015-16,LAL,8.3,29.45,0,0,0,0
 Kobe Bryant,2015-16,LAL,-12.5,26.55,1,0,0,0

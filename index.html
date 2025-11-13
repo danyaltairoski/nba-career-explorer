@@ -26,8 +26,24 @@
   </header>
 
   <main class="layout">
+    <aside class="shot-panel">
+      <div class="shot-type-section">
+        <div class="shot-type-header">
+          <h3>Shot selection</h3>
+          <span id="shotTypeSeason">–</span>
+        </div>
+        <div id="shotTypeBars">
+          <div class="seasonHint">Shot mix will appear here.</div>
+        </div>
+      </div>
+    </aside>
+
     <section class="vis-panel">
       <svg id="court" width="900" height="550" aria-label="Player shot chart"></svg>
+      <div class="highlightHint" aria-live="polite">
+        <span class="highlightHintIcon"></span>
+        <span>Glowing shots contain highlight clips — hover to watch.</span>
+      </div>
     </section>
 
     <section class="timeline-panel">
@@ -35,6 +51,12 @@
       <div id="seasonBars" aria-live="polite"></div>
     </section>
   </main>
+
+  <div id="shotTooltip" class="shotTooltip hidden">
+    <div class="tooltipSeason"></div>
+    <div class="tooltipText"></div>
+    <div class="tooltipMedia"></div>
+  </div>
 
   <script src="js/court.js"></script>
   <script src="js/timeline.js"></script>
